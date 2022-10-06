@@ -1,0 +1,131 @@
+body {
+	min-height: 100vh;
+  background: #EEd19C;
+	cursor: none;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+h1{
+	text-align:center;
+	color: #749;
+	padding-top: 30px;
+}
+h1:hover ~ .mouse{
+	width: 50px;
+	height: 50px;
+	border: 2px dashed rgba(37, 0, 255, 0.3)
+}
+.mouse { 
+  display: none;         
+	position: absolute;      
+	width: 25px;    
+	height: 25px;      
+	border: 2px solid rgba(37, 0, 255, 0.3);
+  border-radius: 50%;         
+}       
+.clock {
+	width: 30rem;
+	height: 30rem;
+  background: #EFB28C;
+	border: 20px solid #EFB28C;
+	border-radius: 50%;
+	margin: 0px auto;
+	position: relative;
+	padding: 1rem;
+	box-shadow:
+		inset 5px 5px 10px #c69374,
+		10px 10px 10px rgba(0,0,0,0.2);
+}
+.clock-face {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.clock-face:after {
+	content:'';
+	display:block;
+	width: 20px;
+	height:20px;
+	border-radius: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background-color: #749;
+  z-index: 20;
+}
+.hand {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+  z-index: 10;
+}
+.secondHand:after{
+	position: absolute;
+	content:'';
+	display:block;
+	width: 5px;
+	height: 50%;
+	background-color: #749;
+	left: 50%;
+	transform: translate(-50%,0%);
+}
+.minHand:after{
+	position: absolute;
+	content:'';
+	display:block;
+	width: 7px;
+	height: 40%;
+	background-color: rgb(208, 208, 208);
+	left: 50%;
+	bottom: 50%;
+	transform: translate(-50%,0%);
+}
+.hourHand:after{
+	position: absolute;
+	content:'';
+	display:block;
+	width: 12px;
+	height: 20%;
+	background-color: rgb(147, 147, 147);
+  border-radius: 10px;
+	left: 50%;
+	bottom: 50%;
+	transform: translate(-50%,0%);
+}
+.mark {
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+}
+.mark-1, .mark-2, .mark-3, .mark-4{
+  position: absolute;
+  border-radius: 5px;
+  box-shadow: inset 1px 1px 1px rgb(213, 212, 212), 
+  inset -1px -1px 1px rgb(240, 238, 238);
+  width: 10px;
+  height: 30px;
+}
+.mark-1{
+  left: 50%;
+  top:10px;
+  transform: translateX(-50%);
+}
+.mark-2{
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%) rotate(90deg) ;
+}
+.mark-3{
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.mark-4{
+  left: 20px;
+  top:50%;
+  transform: translateY(-50%) rotate(90deg)
+}
